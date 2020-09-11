@@ -53,7 +53,7 @@ class TicTacToe
   def turn
       puts "Make a move by choosing a position between 1 - 9."
       # upon lots of Googling, adding STDIN. to gets fixes an Errno::ENOENT no such file or directory @ rb_sysopen error. BUT then it causes an error with the test to use the gets method to accept an input...
-      input = STDIN.gets
+      input = gets.strip
       index = input_to_index(input)
       cp = current_player
       if valid_move?(index)
